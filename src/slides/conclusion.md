@@ -1,30 +1,18 @@
-## Why was TS the winner?
+## Scorecard
 {state: 'title'}
 
-## Worse is better?
+## Worse is better
+{class:'notitle'}
 
 ![img](src/img/gabriel.jpg)
 
-## Criteria
+##      
+{class:'notitle'}
 
 1. Simplicity
 1. Correctness
 1. Consistency
 1. Completeness
-
-## Simplicitly
-
-## Correct
-
-> Slightly better to be simple than correct
-
-## Consistency
-
-## Completeness
-
-> can be sacrificed in favor of any other quality
-
-- Shipped without generics
 
 ## Further
 

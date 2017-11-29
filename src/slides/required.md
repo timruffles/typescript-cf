@@ -82,12 +82,45 @@ I started out with dynamic
 
 ![why](src/img/why.png)
 
-## Boring
+## Java
 {class:'notitle'}
 
-![boring](src/img/yawn.jpg)
+```java
+// A generic greeting program
+public class HelloWorld{
+  private static HelloWorld instance;
+
+  public static void main(String[] args){
+    instantiateHelloWorldMainClassAndRun();
+  }
+
+  public static void instantiateHelloWorldMainClassAndRun(){
+    instance = new HelloWorld();
+  }
+
+  public HelloWorld(){
+    HelloWorldFactory factory =
+      HelloWorldFactory.getInstance();
+    IHelloWorld helloWorld = 
+      factory.createHelloWorld();
+    IHelloWorldString helloWorldString =
+      helloWorld.getHelloWorld();
+    IPrintStrategy printStrategy =
+      helloWorld.getPrintStrategy();
+    IStatusCode code = helloWorld.print(
+      printStrategy, helloWorldString);
+    if(code.getStatusCode() != 0){
+      throw new RuntimeException("Failed to print: " 
+        + code.getStatusCode());
+    }
+  }
+}
+```
 
 ## Many have tried to kill JS
+{class:'noshadow'}
+
+![replace](src/img/replace-js.png)
 
 ## JS started ugly
 
@@ -102,3 +135,5 @@ I started out with dynamic
 Jeff Atwood
 
 ## So all have failed
+
+## This was the status quo...

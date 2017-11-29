@@ -1,22 +1,22 @@
-## We've met the characters
+## October 1st 2012
 {state:'title'}
 
 ## The most popular language in the world
 
-## The villian of OSS
+![mikael](src/img/mikael.jpg)
 
-## October 1st 2012
+## The villian of OSS
 
 ## A MSFT legend released a new project
 {class:'notitle'}
 
-![img](src/img/anders.jpg)
+![anders](src/img/anders.jpg)
 
 ##    
-![img](src/img/trojan.jpg)
+![trojan](src/img/trojan.jpg)
 
 ##   
-![img](src/img/ugly.png)
+![ugly](src/img/ugly.png)
 
 ## The JS community acts...
 {class:'notitle'}

@@ -1,4 +1,4 @@
-## The language
+## How?
 {state:'title'}
 
 ## Extending
@@ -80,6 +80,34 @@ const parent = el.parentElement;
 parent.setAttribute("src", imageLocation);
 ```
 
+## Criteria
+{state:'title'}
+
+## Worse is better
+
+![img](src/img/gabriel.jpg)
+
+## Criteria
+
+1. Simplicity
+1. Correctness
+1. Consistency
+1. Completeness
+
+## Simplicitly
+
+## Correct
+
+> Slightly better to be simple than correct
+
+## Consistency
+
+## Completeness
+
+> can be sacrificed in favor of any other quality
+
+- Shipped without generics
+
 ## TypeScript feels familiar
 
 ## e.g vs Coffeescript
@@ -141,7 +169,7 @@ var main = render(fold(Data_Foldable.foldableArray)
 - generics
 - type unions
 - mapped types
-
+- classes/interfaces/type aliases
 
 ## It's not dumb
 {class:'notitle'}
@@ -163,7 +191,7 @@ const double = (x: number) => x * 2;
 double(message);
 ```
 
-## Advanced inference
+## Flow analysis
 
 ```typescript
 // infers return type: Element | undefined
@@ -203,7 +231,7 @@ type Pick<Type, Key extends keyof Type> = {
 function pick<
   Type, 
   Key extends keyof Type
->(obj: Type, ...keys: Key[]): Pick<Type, Key>;
+>(obj: Type, keys: Key | Key[]): Pick<Type, Key>;
 ```
 ## Tagged unions
 

@@ -4,6 +4,7 @@
 ## Instant gratification
 
 ## Ecosystem intelligence
+{class:'noshadow'}
 
 ![npm](src/img/npm.png)
 

@@ -8,7 +8,7 @@
 
 set -e
 
-compiled=$(node4 tools/build.js)
+compiled=$(node tools/build.js)
 
 cat src/templates/header.html <(echo "$compiled") src/templates/footer.html
 

@@ -61,11 +61,19 @@ How big?
 
 <section   class="notitle"><h2 id="well-">well?</h2>
 <blockquote>
-<p>traffic to TypeScript questions grew ... enough that we left it off to avoid overwhelming the rest of the scale. </p>
+<p>traffic to TypeScript questions grew ... enough that we left it off to avoid overwhelming the rest of the scale.</p>
 </blockquote>
 <p><img src="src/img/growth-b.png" alt="growth"></p>
 <aside class=notes>
-Even though it went against everything the community stood for
+Even though it was product that angered the community leaders
+</aside>
+
+</section>
+
+<section   class="notitle noshadow"><h2 id="duel">duel</h2>
+<p><img src="src/img/duel.png" alt="duel"></p>
+<aside class=notes>
+because it was perceived to be against the JS community itself
 </aside>
 
 </section>
@@ -148,11 +156,41 @@ I started out with dynamic
 <p><img src="src/img/why.png" alt="why"></p>
 </section>
 
-<section   class="notitle"><h2 id="boring">Boring</h2>
-<p><img src="src/img/yawn.jpg" alt="boring"></p>
+<section   class="notitle"><h2 id="java">Java</h2>
+<pre><code class="lang-java">// A generic greeting program
+public class HelloWorld{
+  private static HelloWorld instance;
+
+  public static void main(String[] args){
+    instantiateHelloWorldMainClassAndRun();
+  }
+
+  public static void instantiateHelloWorldMainClassAndRun(){
+    instance = new HelloWorld();
+  }
+
+  public HelloWorld(){
+    HelloWorldFactory factory =
+      HelloWorldFactory.getInstance();
+    IHelloWorld helloWorld = 
+      factory.createHelloWorld();
+    IHelloWorldString helloWorldString =
+      helloWorld.getHelloWorld();
+    IPrintStrategy printStrategy =
+      helloWorld.getPrintStrategy();
+    IStatusCode code = helloWorld.print(
+      printStrategy, helloWorldString);
+    if(code.getStatusCode() != 0){
+      throw new RuntimeException(&quot;Failed to print: &quot; 
+        + code.getStatusCode());
+    }
+  }
+}
+</code></pre>
 </section>
 
-<section   class=""><h2 id="many-have-tried-to-kill-js">Many have tried to kill JS</h2>
+<section   class="noshadow"><h2 id="many-have-tried-to-kill-js">Many have tried to kill JS</h2>
+<p><img src="src/img/replace-js.png" alt="replace"></p>
 </section>
 
 <section   class=""><h2 id="js-started-ugly">JS started ugly</h2>
@@ -170,6 +208,9 @@ I started out with dynamic
 </section>
 
 <section   class=""><h2 id="so-all-have-failed">So all have failed</h2>
+</section>
+
+<section   class=""><h2 id="this-was-the-status-quo-">This was the status quo...</h2>
 </section>
 
 <section   class="notitle"><h2 id="coming-for-oss">Coming for OSS</h2>
@@ -191,28 +232,26 @@ I started out with dynamic
 <p><img src="src/img/do-not-hire.png" alt="deep"></p>
 </section>
 
-<section data-state=title  class=""><h2 id="we-ve-met-the-characters">We&#39;ve met the characters</h2>
+<section data-state=title  class=""><h2 id="october-1st-2012">October 1st 2012</h2>
 </section>
 
 <section   class=""><h2 id="the-most-popular-language-in-the-world">The most popular language in the world</h2>
+<p><img src="src/img/mikael.jpg" alt="mikael"></p>
 </section>
 
 <section   class=""><h2 id="the-villian-of-oss">The villian of OSS</h2>
 </section>
 
-<section   class=""><h2 id="october-1st-2012">October 1st 2012</h2>
-</section>
-
 <section   class="notitle"><h2 id="a-msft-legend-released-a-new-project">A MSFT legend released a new project</h2>
-<p><img src="src/img/anders.jpg" alt="img"></p>
+<p><img src="src/img/anders.jpg" alt="anders"></p>
 </section>
 
 <section   class=""><h2 id="-"> </h2>
-<p><img src="src/img/trojan.jpg" alt="img"></p>
+<p><img src="src/img/trojan.jpg" alt="trojan"></p>
 </section>
 
 <section   class=""><h2 id="-"> </h2>
-<p><img src="src/img/ugly.png" alt="img"></p>
+<p><img src="src/img/ugly.png" alt="ugly"></p>
 </section>
 
 <section   class="notitle"><h2 id="the-js-community-acts-">The JS community acts...</h2>
@@ -231,7 +270,7 @@ I started out with dynamic
 <p><img src="src/img/like-it.png" alt="img"></p>
 </section>
 
-<section data-state=title  class=""><h2 id="the-language">The language</h2>
+<section data-state=title  class=""><h2 id="how-">How?</h2>
 </section>
 
 <section   class=""><h2 id="extending">Extending</h2>
@@ -307,6 +346,43 @@ parent.setAttribute(&quot;src&quot;, imageLocation);
 </code></pre>
 </section>
 
+<section data-state=title  class=""><h2 id="criteria">Criteria</h2>
+</section>
+
+<section   class=""><h2 id="worse-is-better">Worse is better</h2>
+<p><img src="src/img/gabriel.jpg" alt="img"></p>
+</section>
+
+<section   class=""><h2 id="criteria">Criteria</h2>
+<ol>
+<li>Simplicity</li>
+<li>Correctness</li>
+<li>Consistency</li>
+<li>Completeness</li>
+</ol>
+</section>
+
+<section   class=""><h2 id="simplicitly">Simplicitly</h2>
+</section>
+
+<section   class=""><h2 id="correct">Correct</h2>
+<blockquote>
+<p>Slightly better to be simple than correct</p>
+</blockquote>
+</section>
+
+<section   class=""><h2 id="consistency">Consistency</h2>
+</section>
+
+<section   class=""><h2 id="completeness">Completeness</h2>
+<blockquote>
+<p>can be sacrificed in favor of any other quality</p>
+</blockquote>
+<ul>
+<li>Shipped without generics</li>
+</ul>
+</section>
+
 <section   class=""><h2 id="typescript-feels-familiar">TypeScript feels familiar</h2>
 </section>
 
@@ -365,6 +441,7 @@ var main = render(fold(Data_Foldable.foldableArray)
 <li>generics</li>
 <li>type unions</li>
 <li>mapped types</li>
+<li>classes/interfaces/type aliases</li>
 </ul>
 </section>
 
@@ -384,7 +461,7 @@ double(message);
 </code></pre>
 </section>
 
-<section   class=""><h2 id="advanced-inference">Advanced inference</h2>
+<section   class=""><h2 id="flow-analysis">Flow analysis</h2>
 <pre><code class="lang-typescript">// infers return type: Element | undefined
 function getOffset(node: Element) {
   if (node instanceof HTMLElement) {
@@ -420,7 +497,7 @@ type Pick&lt;Type, Key extends keyof Type&gt; = {
 function pick&lt;
   Type, 
   Key extends keyof Type
-&gt;(obj: Type, ...keys: Key[]): Pick&lt;Type, Key&gt;;
+&gt;(obj: Type, keys: Key | Key[]): Pick&lt;Type, Key&gt;;
 </code></pre>
 </section>
 
@@ -513,7 +590,7 @@ const number: PhoneNumber = {
 <section   class=""><h2 id="instant-gratification">Instant gratification</h2>
 </section>
 
-<section   class=""><h2 id="ecosystem-intelligence">Ecosystem intelligence</h2>
+<section   class="noshadow"><h2 id="ecosystem-intelligence">Ecosystem intelligence</h2>
 <p><img src="src/img/npm.png" alt="npm"></p>
 </section>
 
@@ -571,41 +648,20 @@ mirage.js(2215,20): error TS8024: JSDoc &#39;@param&#39;
   is no parameter with that name.
 </code></pre></section>
 
-<section data-state=title  class=""><h2 id="why-was-ts-the-winner-">Why was TS the winner?</h2>
+<section data-state=title  class=""><h2 id="scorecard">Scorecard</h2>
 </section>
 
-<section   class=""><h2 id="worse-is-better-">Worse is better?</h2>
+<section   class="notitle"><h2 id="worse-is-better">Worse is better</h2>
 <p><img src="src/img/gabriel.jpg" alt="img"></p>
 </section>
 
-<section   class=""><h2 id="criteria">Criteria</h2>
+<section   class="notitle"><h2 id="-"> </h2>
 <ol>
 <li>Simplicity</li>
 <li>Correctness</li>
 <li>Consistency</li>
 <li>Completeness</li>
 </ol>
-</section>
-
-<section   class=""><h2 id="simplicitly">Simplicitly</h2>
-</section>
-
-<section   class=""><h2 id="correct">Correct</h2>
-<blockquote>
-<p>Slightly better to be simple than correct</p>
-</blockquote>
-</section>
-
-<section   class=""><h2 id="consistency">Consistency</h2>
-</section>
-
-<section   class=""><h2 id="completeness">Completeness</h2>
-<blockquote>
-<p>can be sacrificed in favor of any other quality</p>
-</blockquote>
-<ul>
-<li>Shipped without generics</li>
-</ul>
 </section>
 
 <section   class=""><h2 id="further">Further</h2>

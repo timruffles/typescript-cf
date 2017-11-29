@@ -1,4 +1,4 @@
-frontpage
+intro
 
 required
 
